@@ -5,9 +5,11 @@ services:
     image: custom_pytorch
     ipc: host
     volumes:
-      - ./:/workspace
+      - ./:/home/robesafe/workspace
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.Xauthority:/root/.Xauthority:ro
+      - $HOME/Datasets/carvana:/home/robesafe/Datasets/carvana:ro
+      - $HOME/.netrc:/home/robesafe/.netrc:ro
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics,display

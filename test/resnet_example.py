@@ -1,11 +1,14 @@
 import torch
 import urllib
+import os
+
+print(os.getcwd())
 
 model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True)
 model.eval()
 
 import urllib
-url, filename = ("https://github.com/pytorch/hub/raw/master/images/dog.jpg", "examples/dog.jpg")
+url, filename = ("https://github.com/pytorch/hub/raw/master/images/dog.jpg", "test/dog.jpg")
 try: urllib.URLopener().retrieve(url, filename)
 except: urllib.request.urlretrieve(url, filename)
 
