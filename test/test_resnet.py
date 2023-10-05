@@ -1,8 +1,9 @@
 import torch
 import urllib
 import os
+import warnings
 
-print(os.getcwd())
+warnings.warn(os.getcwd(), UserWarning)
 
 model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True)
 model.eval()

@@ -27,6 +27,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
         pip install -r docker/requirements.txt
-    - name: Run tests
+    - name: Run environment check
       run: |
-        python src/test/resnet_example.py
+        pytest
+

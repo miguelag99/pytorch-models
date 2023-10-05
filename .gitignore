@@ -1,6 +1,7 @@
 results/*
 wandb/*
 checkpoints/*
+test/*.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
