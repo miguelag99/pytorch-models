@@ -91,7 +91,7 @@ class DownSample(nn.Module):
 class UpSample(nn.Module):
     ## Upsample block for UNet (Upsample + 2x(conv+BN+ReLU)))
 
-    def __init__(self,in_c,out_c,bilinear=True):
+    def __init__(self,in_c,out_c,bilinear=False):
         super().__init__()
         if bilinear == True:
             self.up = nn.Sequential(
